@@ -1,0 +1,101 @@
+/* Estilo general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ececec;
+    margin: 0;
+    }
+/* Contenedor de la tarjeta */
+.tarjeta {
+    width: 300px;
+    height: 400px;
+    transition: transform 0.9s; /*nuevo*/
+    transform-style: preserve-3d; /*nuevo*/
+    }
+/* Las caras de la tarjeta */
+    .cara {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Oculta la cara posterior cuando está volcada */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+/* Cara frontal */
+.frontal {
+    background-color: #ffffff;
+    padding: 20px;
+    }
+    .frontal img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    }
+    .frontal h2 {
+    font-size: 22px;
+    font-weight: bold;
+color: #333;
+margin-bottom: 10px;
+}
+.frontal p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+    }
+    .frontal button {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    }
+.frontal button:hover {
+        background-color: #45a049;
+        }
+        /* Cara posterior */
+.posterior {
+    background-color: #2d3e50;
+    color: white;
+    transform: rotateY(180deg); /* Coloca la parte
+    posterior invertida */
+    padding: 20px;
+    }
+    .posterior h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    }
+    .posterior p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    }
+.posterior button:hover {
+        background-color: #0056b3;
+        }
+/*/* Voltear la tarjeta cuando se hace clic en
+Detalles */
+/*.tarjeta:hover .frontal {
+    transform: rotateY(180deg); /* Voltea la
+    cara frontal */
+    /*}
+    .tarjeta:hover .posterior {
+    transform: rotateY(0deg); /* Muestra la
+    cara posterior */
+    /*}
