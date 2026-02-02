@@ -119,11 +119,11 @@
 
             <div class="z-10 text-center max-w-2xl bg-white/40 backdrop-blur-md p-12 rounded-[3rem] border border-white/60 shadow-sm">
                 <h1 class="text-5xl font-black text-slate-800 mb-4 tracking-tighter uppercase">
-                    Core <span class="font-light text-slate-400">Bancario</span>
+                    EDV <span class="font-light text-slate-400">EDV</span>
                 </h1>
                 <div id="accent-line" class="h-2 w-20 mx-auto mb-10 rounded-full"></div>
                 <p class="text-slate-500 text-base font-medium leading-relaxed max-w-md mx-auto">
-                    Panel de control operativo de valores. Seleccione una paleta de colores arriba para previsualizar la interfaz.
+                    Seleccione una paleta de colores arriba para previsualizar la interfaz.
                 </p>
             </div>
 
@@ -142,7 +142,7 @@
         // Paletas de Colores (21 variantes ahora)
         const palettes = {
             original: { name: "Original Imagen", header: "#177090", dropdown: "#203764", content: "#f4f1ea", bottom: "#177090", accent: "#95c11f", text: "white" },
-            marino: { name: "Marino Premium", header: "#203764", dropdown: "#1a2d52", content: "#ffffff", bottom: "#203764", accent: "#95c11f", text: "white" },
+            marino: { name: "Marino Premium", header: "#203764", dropdown: "#177090", content: "#ffffff", bottom: "#203764", accent: "#95c11f", text: "white" },
             tech: { name: "Tech Celeste", header: "#69b7c6", dropdown: "#177090", content: "#f8fafc", bottom: "#177090", accent: "#203764", text: "white" },
             lima: { name: "Lima Energy", header: "#95c11f", dropdown: "#203764", content: "#ffffff", bottom: "#177090", accent: "#203764", text: "white" },
             gris: { name: "Gris Ejecutivo", header: "#9d9d9c", dropdown: "#177090", content: "#f9fafb", bottom: "#203764", accent: "#95c11f", text: "white" },
@@ -159,13 +159,14 @@
             corp_mix: { name: "Corporativo Mix", header: "#177090", dropdown: "#203764", content: "#f4f1ea", bottom: "#95c11f", accent: "#203764", text: "white" },
 
             bloque_marino: { name: "Bloque Marino", header: "#203764", dropdown: "#177090", content: "#ffffff", bottom: "#203764", accent: "#95c11f", text: "white" },
-            bloque_petroleo: { name: "Bloque Petróleo", header: "#177090", dropdown: "#203764", content: "#f1f5f9", bottom: "#177090", accent: "#95c11f", text: "white" },
+            bloque_petroleo: { name: "Bloque Petróleo", header: "#177090", dropdown: "#9d9d9c", content: "#f1f5f9", bottom: "#177090", accent: "#95c11f", text: "white" },
             bloque_gris: { name: "Bloque Gris Pro", header: "#334155", dropdown: "#177090", content: "#f8fafc", bottom: "#334155", accent: "#69b7c6", text: "white" },
 
-            // 3 NUEVAS PALETAS SOLICITADAS (HEADER Y FOOTER IGUALES CON COLORES ESPECÍFICOS)
+           
             bloque_celeste: { name: "Bloque Celeste Tech", header: "#69b7c6", dropdown: "#203764", content: "#ffffff", bottom: "#69b7c6", accent: "#95c11f", text: "white" },
             bloque_lima: { name: "Bloque Verde Lima", header: "#95c11f", dropdown: "#177090", content: "#ffffff", bottom: "#95c11f", accent: "#203764", text: "white" },
-            duo_energetico: { name: "Dúo Energético", header: "#203764", dropdown: "#69b7c6", content: "#f1f5f9", bottom: "#203764", accent: "#95c11f", text: "white" }
+            duo_energetico: { name: "Dúo Energético", header: "#203764", dropdown: "#69b7c6", content: "#f1f5f9", bottom: "#203764", accent: "#95c11f", text: "white" },
+			duo_lima: { name: "Otroo", header: "#177090", dropdown: "#95c11f", content: "#f1f5f9", bottom: "#177090", accent: "#95c11f", text: "white" }
         };
 
         function applyPalette(key, btnElement) {
@@ -244,3 +245,4 @@
     </script>
 </body>
 </html>
+
