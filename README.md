@@ -48,14 +48,12 @@
     <div class="mb-6 w-full max-w-7xl bg-white p-5 rounded-2xl shadow-sm border border-gray-200">
         <div class="flex items-center justify-between mb-4 px-2">
             <span class="text-[10px] uppercase font-extrabold text-slate-400 tracking-[0.2em] flex items-center gap-2">
-                <i data-lucide="palette" class="w-4 h-4"></i> Selector de Combinaciones de Menú
+                <i data-lucide="palette" class="w-4 h-4"></i> Selector de Tonos Plomo y Transparencias
             </span>
             <div class="flex gap-2">
-                <div class="w-3 h-3 rounded-full" style="background-color: #95C11F;" title="Verde Lima"></div>
-                <div class="w-3 h-3 rounded-full" style="background-color: #203764;" title="Azul Marino"></div>
-                <div class="w-3 h-3 rounded-full" style="background-color: #9D9D9C;" title="Gris"></div>
-                <div class="w-3 h-3 rounded-full" style="background-color: #69B7C6;" title="Celeste"></div>
-                <div class="w-3 h-3 rounded-full" style="background-color: #177090;" title="Petróleo"></div>
+                <div class="w-3 h-3 rounded-full" style="background-color: #D1D5DB;" title="Plomo Claro"></div>
+                <div class="w-3 h-3 rounded-full" style="background-color: #9D9D9C;" title="Plomo Medio"></div>
+                <div class="w-3 h-3 rounded-full" style="background-color: #4B5563;" title="Plomo Oscuro"></div>
             </div>
         </div>
         <div id="palette-grid" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2 max-h-[160px] overflow-y-auto">
@@ -73,7 +71,6 @@
             </div>
             <div class="flex items-center gap-8">
                 <span>Institución <span class="font-bold uppercase">Entidad de Depósito de Valores de Bolivia S.A.</span></span>
-                <!-- Logo EDV sin icono -->
                 <div class="flex items-center gap-2 border-l border-white/20 pl-4">
                    <div class="flex flex-col items-end leading-none">
                         <span class="text-[18px] font-black tracking-tighter">EDV</span>
@@ -91,20 +88,20 @@
                     Fondos <i data-lucide="chevron-down" id="arrow" class="w-3 h-3 transition-transform"></i>
                 </button>
 
-                <!-- El Submenú -->
-                <div id="dropdown" class="hidden absolute top-full left-0 w-64 shadow-xl z-[100] transition-all-custom border-t border-black/10">
-                    <div class="p-1">
-                        <div class="flex items-center gap-3 p-3 menu-item-hover text-white cursor-pointer rounded-md transition-colors">
-                            <i data-lucide="folder" class="w-4 h-4 opacity-70"></i>
-                            <span class="text-[10px] font-bold uppercase">Administración de Carteras</span>
+                <!-- El Submenú con Transparencia -->
+                <div id="dropdown" class="hidden absolute top-full left-0 w-72 shadow-2xl z-[100] transition-all-custom border-t border-black/5 backdrop-blur-sm">
+                    <div class="p-1.5">
+                        <div class="flex items-center gap-3 p-3.5 menu-item-hover text-white cursor-pointer rounded-lg transition-colors">
+                            <i data-lucide="folder" class="w-4 h-4 opacity-80"></i>
+                            <span class="text-[10px] font-bold uppercase tracking-tight">Administración de Carteras</span>
                         </div>
-                        <div class="flex items-center gap-3 p-3 menu-item-hover text-white cursor-pointer rounded-md transition-colors">
-                            <i data-lucide="file-text" class="w-4 h-4 opacity-70"></i>
-                            <span class="text-[10px] font-bold uppercase">Reportes de Fondos</span>
+                        <div class="flex items-center gap-3 p-3.5 menu-item-hover text-white cursor-pointer rounded-lg transition-colors">
+                            <i data-lucide="file-text" class="w-4 h-4 opacity-80"></i>
+                            <span class="text-[10px] font-bold uppercase tracking-tight">Reportes de Fondos</span>
                         </div>
-                        <div class="flex items-center gap-3 p-3 menu-item-hover text-white cursor-pointer rounded-md transition-colors">
-                            <i data-lucide="database" class="w-4 h-4 opacity-70"></i>
-                            <span class="text-[10px] font-bold uppercase">Saldos y Movimientos</span>
+                        <div class="flex items-center gap-3 p-3.5 menu-item-hover text-white cursor-pointer rounded-lg transition-colors">
+                            <i data-lucide="database" class="w-4 h-4 opacity-80"></i>
+                            <span class="text-[10px] font-bold uppercase tracking-tight">Saldos y Movimientos</span>
                         </div>
                     </div>
                 </div>
@@ -118,22 +115,27 @@
         </div>
 
         <!-- Área de Trabajo -->
-        <div id="workspace" class="flex-grow relative flex flex-col items-center justify-center bg-white">
+        <div id="workspace" class="flex-grow relative flex flex-col items-center justify-center bg-gray-50/50">
+            <!-- Marca de agua sutil para notar la transparencia -->
+            <div class="absolute top-10 left-10 opacity-[0.05] pointer-events-none">
+                <h2 class="text-9xl font-black">EDV</h2>
+            </div>
+            
             <div class="z-10 text-center">
                 <div class="flex items-center justify-center gap-3 mb-6">
                     <div class="h-[1px] w-12 bg-slate-200"></div>
-                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-[0.4em]">Interfaz Corporativa</span>
+                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-[0.4em]">Configuración de Estilos</span>
                     <div class="h-[1px] w-12 bg-slate-200"></div>
                 </div>
                 <h1 id="main-title" class="text-7xl font-black text-slate-800 tracking-tighter mb-2 uppercase">
-                    EDV <span class="font-light text-slate-300 tracking-normal">Direct</span>
+                    EDV <span class="font-light text-slate-400 tracking-normal">Direct</span>
                 </h1>
                 <div id="accent-line" class="h-1.5 w-24 mx-auto rounded-full mb-8 transition-all-custom"></div>
                 
-                <div class="bg-slate-50 border border-slate-100 p-4 rounded-xl inline-block shadow-sm">
-                    <p class="text-[11px] text-slate-500 font-bold uppercase tracking-wider">
-                        Color Barra Menú: <span id="current-p-name" class="font-extrabold">Gris Ejecutivo</span>
-                    </p>
+                <div class="bg-white border border-slate-200 p-6 rounded-2xl inline-block shadow-sm">
+                    <p class="text-[11px] text-slate-400 font-bold uppercase tracking-widest mb-1">Submenú actual</p>
+                    <p id="current-p-name" class="text-xl font-black text-slate-800 uppercase tracking-tighter">Plomo Original</p>
+                    <div id="hex-label" class="mt-2 text-[9px] font-mono text-slate-400 bg-slate-100 py-1 px-2 rounded">rgba(157, 157, 156, 0.95)</div>
                 </div>
             </div>
         </div>
@@ -151,16 +153,16 @@
     </div>
 
     <script>
-        // Paletas enfocadas en el Menú y Submenú
+        // Paletas con enfoque en tonos Plomo y distintos niveles de transparencia (rgba)
         const palettes = [
-            { name: "Gris Ejecutivo", nav: "#9D9D9C", sub: "#9D9D9C", accent: "#95C11F" },
-            { name: "Azul Marino", nav: "#203764", sub: "#203764", accent: "#95C11F" },
-            { name: "Verde Lima", nav: "#95C11F", sub: "#95C11F", accent: "#203764" },
-            { name: "Celeste Tech", nav: "#69B7C6", sub: "#69B7C6", accent: "#177090" },
-            { name: "Petróleo Menú", nav: "#177090", sub: "#177090", accent: "#95C11F" },
-            { name: "Marino & Celeste", nav: "#203764", sub: "#69B7C6", accent: "#95C11F" },
-            { name: "Gris & Marino", nav: "#9D9D9C", sub: "#203764", accent: "#177090" },
-            { name: "Petróleo & Lima", nav: "#177090", sub: "#95C11F", accent: "#203764" }
+            { name: "Plomo Base", nav: "#9D9D9C", sub: "rgba(157, 157, 156, 0.95)", accent: "#95C11F" },
+            { name: "Plomo Cristal", nav: "#9D9D9C", sub: "rgba(157, 157, 156, 0.75)", accent: "#69B7C6" },
+            { name: "Gris Nube", nav: "#D1D5DB", sub: "rgba(209, 213, 219, 0.90)", accent: "#177090" },
+            { name: "Gris Humo", nav: "#4B5563", sub: "rgba(75, 85, 99, 0.85)", accent: "#95C11F" },
+            { name: "Gris Pizarra", nav: "#374151", sub: "rgba(55, 65, 81, 0.92)", accent: "#69B7C6" },
+            { name: "Plomo Hielo", nav: "#9D9D9C", sub: "rgba(241, 245, 249, 0.98)", accent: "#203764", text: "#475569" },
+            { name: "Plomo & Celeste", nav: "#9D9D9C", sub: "rgba(105, 183, 198, 0.90)", accent: "#177090" },
+            { name: "Gris Profundo", nav: "#1F2937", sub: "rgba(31, 41, 55, 0.95)", accent: "#95C11F" }
         ];
 
         function applyPalette(index, btn) {
@@ -170,13 +172,23 @@
             const dropdown = document.getElementById('dropdown');
             const accentLine = document.getElementById('accent-line');
             const currentName = document.getElementById('current-p-name');
+            const hexLabel = document.getElementById('hex-label');
 
             navBar.style.backgroundColor = p.nav;
             dropdown.style.backgroundColor = p.sub;
             accentLine.style.backgroundColor = p.accent;
             currentName.innerText = p.name;
-            currentName.style.color = p.nav;
+            hexLabel.innerText = p.sub;
             
+            // Cambiar color de texto en el submenú si es muy claro
+            const subItems = dropdown.querySelectorAll('.menu-item-hover span');
+            const subIcons = dropdown.querySelectorAll('.menu-item-hover i');
+            const textColor = p.text || "white";
+            
+            subItems.forEach(s => s.style.color = textColor);
+            subIcons.forEach(i => i.style.color = textColor);
+
+            // Gestionar botones del panel
             document.querySelectorAll('.palette-btn').forEach(b => {
                 b.classList.remove('border-slate-800', 'bg-slate-800', 'text-white', 'scale-105');
                 b.classList.add('border-gray-100', 'bg-white', 'text-slate-500');
